@@ -58,7 +58,7 @@
 	This is the idea of a closure; intuitively, a closure states that "I have some elements of the same type, imma do some operations on them, and the result is also gonna be of that same type".
 	
 	\begin{defn}
-		A set $A$ forms a \emph{closure} over $f: (A, \dots, A) \to A$. This generalizes the aforementioned binary operations as a binary operator $\otimes$ is just a fuction $\otimes: (A, A) \to A$.
+		A set $A$ forms a \emph{closure} over some function $f: (A, \dots, A) \to A$. This generalizes the aforementioned binary operations as a binary operator $\otimes$ is just a fuction $\otimes: (A, A) \to A$. We also say that $A$ is \emph{closed} under $f: (A, \dots, A) \to A$.
 	\end{defn}
 	
 	\begin{ex}
@@ -124,7 +124,7 @@
 	\begin{gather*}
 		f(x) = \frac{69}{x^2} + 69x^2 + \frac{1}{69}x + 69
 	\end{gather*}
-	Note that all coefficients are elements of $\QQ$. In addition, don't get thrown off by variables as denominators in a fraction; they are simple $x$ to negative powers!
+	Note that all coefficients are elements of $\QQ$. In addition, don't get thrown off by variables as denominators in a fraction; they are simply $x$ to negative powers!
 	
 	So, $\QQ$ is a field. That means we can do whatever operations on its member, and the result will still end up inside $\QQ$ (due to closure), right? While this is the case for $+$ and $*$, there are some operations that do not form a closure over $\QQ$. The most notable example is the square root function.
 	
@@ -135,5 +135,24 @@
 	\end{ex}
 	
 	Uh oh, as nice as the rational numbers are, they do not include certain numbers such as $\sqrt{2}$. However, we can still squeeze $\sqrt{2}$ in there if we really wanted. Nothing can go wrong, right? Addition and multiplication still preserve their properties even when $\sqrt{2}$ is introduced, so there is no reason why we can't extend our "rational number" field to include just this one irrational number $\sqrt{2}$. This is the idea of \emph{field extensions}.
+	
+	\begin{defn}
+		The field $(F, \oplus_F, \otimes_F)$ is an extension to the field $(E, \oplus_E, \otimes_E)$ if the two fields satisfy:
+		\begin{enumerate}
+			\item $E \subseteq F$
+			\item $\oplus_E$ is simply $\oplus_F$ restricted to $E$, i.e. $\oplus_F$ over the stricter domain $E$ instead of the original domain $F$
+			\item $\otimes_E$ is simply $\otimes_F$ restricted to $E$
+		\end{enumerate}
+	\end{defn}
+	
+	By squeezing $\sqrt{2}$ into the elements of the rational number field, we obtain a field over the rational numbers and $\sqrt{2}$, whose elements are of the form $a + b\sqrt{2}$ where $a, b \in \QQ$. This field extension of $\QQ$ with $\sqrt{2}$ is denoted as $\QQ[\sqrt{2}]$.
+	
+	\begin{ex}
+		Proof that the elements of $\QQ[\sqrt{2}]$ is closed under addition and multiplication.
+	\end{ex}
+	
+	\begin{ex}
+		Hence or otherwise, proof that $\QQ[\sqrt{2}]$ is a field.
+	\end{ex}
 	
 \end{document}
