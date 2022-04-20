@@ -39,7 +39,7 @@
 	
 	Exercises marked with * are optional; the understanding of them are not necessary to progress in this paper, but nonetheless they might be good practices.
 	
-	\section{Field}
+	\section{Fields}
 	
 	As Yink once said, "mathematics is the constant discovery of new objects". Indeed, we've covered numerous mathematical constructs in high school math, but can we generalize those constructs under some common attributes?
 	
@@ -115,5 +115,25 @@
 	\begin{ex}
 		Vector cross product is distributive over addition. However, vector under addition and cross product does \emph{not} form a field. Explain why.
 	\end{ex}
+	
+	Note that the above definition also covers subtraction and division, as they are just inverses of addition and multiplication respectively.
+	
+	From this point on, unless explicitly specified, the addition and multiplication of all mentioned fields default to the ordinary $+$ and $*$ respectively.
+	
+	The benefit of forming a field is that we can now define polynomials with a set. To illustrate, in the case of $\QQ$, we can define a polynomial like:
+	\begin{gather*}
+		f(x) = \frac{69}{x^2} + 69x^2 + \frac{1}{69}x + 69
+	\end{gather*}
+	Note that all coefficients are elements of $\QQ$. In addition, don't get thrown off by variables as denominators in a fraction; they are simple $x$ to negative powers!
+	
+	So, $\QQ$ is a field. That means we can do whatever operations on its member, and the result will still end up inside $\QQ$ (due to closure), right? While this is the case for $+$ and $*$, there are some operations that do not form a closure over $\QQ$. The most notable example is the square root function.
+	
+	\subsection{Field Extensions}
+	
+	\begin{ex}
+		Proof that $\sqrt{2}$ is not a rational number, i.e. cannot be expressed in the form $\frac{p}{q}$ for some $p, q \in \NN$, $q \neq 0$ (hint: try proving by contradiction).
+	\end{ex}
+	
+	Uh oh, as nice as the rational numbers are, they do not include certain numbers such as $\sqrt{2}$. However, we can still squeeze $\sqrt{2}$ in there if we really wanted. Nothing can go wrong, right? Addition and multiplication still preserve their properties even when $\sqrt{2}$ is introduced, so there is no reason why we can't extend our "rational number" field to include just this one irrational number $\sqrt{2}$. This is the idea of \emph{field extensions}.
 	
 \end{document}
